@@ -7,11 +7,5 @@
     "src/server.ts": {
       "runtime": "nodejs18.x"
     }
-  },
-  "env": {
-    "RESEND_API_KEY": "@resend-api-key",
-    "RESEND_FROM_EMAIL": "@resend-from-email",
-    "RESEND_TO_EMAIL": "@resend-to-email",
-    "SITE_URL": "@site-url"
   }
 }
