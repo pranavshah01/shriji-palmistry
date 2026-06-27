@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".vercel/output",
-  "framework": "tanstack-start",
+  "outputDirectory": "dist",
+  "framework": "vite",
   "installCommand": "npm install"
 }
