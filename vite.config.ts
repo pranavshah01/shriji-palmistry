@@ -7,12 +7,16 @@ import tsConfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [
     tanstackStart({
-      // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-      // nitro/vite builds from this
       server: { entry: "server" },
     }),
     react(),
     tailwindcss(),
     tsConfigPaths(),
   ],
+  define: {
+    global: "globalThis",
+  },
+  ssr: {
+    noExternal: [],
+  },
 });
