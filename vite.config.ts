@@ -1,22 +1,14 @@
 import { defineConfig } from "vite";
-import tanstackStart from "@tanstack/router-plugin/vite";
+import { tanstackStart } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
-    tanstackStart({
-      server: { entry: "server" },
-    }),
+    tanstackStart(),
     react(),
     tailwindcss(),
     tsConfigPaths(),
   ],
-  ssr: {
-    noExternal: ["@tanstack/start-storage-context"],
-  },
-  optimizeDeps: {
-    exclude: ["@tanstack/start-storage-context"],
-  },
 });
