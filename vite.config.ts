@@ -13,10 +13,10 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
-  define: {
-    global: "globalThis",
-  },
   ssr: {
-    noExternal: [],
+    noExternal: ["@tanstack/start-storage-context"],
+  },
+  optimizeDeps: {
+    exclude: ["@tanstack/start-storage-context"],
   },
 });
