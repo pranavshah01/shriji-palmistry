@@ -15,4 +15,15 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
+  build: {
+    rollupOptions: {
+      external: ["node:async_hooks", "node:fs", "node:path"],
+    },
+  },
+  ssr: {
+    noExternal: ["@tanstack/start-storage-context"],
+  },
+  define: {
+    global: "globalThis",
+  },
 });
