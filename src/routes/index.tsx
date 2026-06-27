@@ -300,7 +300,7 @@ function Hero() {
           style={{ y, opacity }}
           className="order-2 lg:order-2 self-stretch flex items-center justify-center lg:justify-end pointer-events-none"
         >
-          <CelestialOrb className="w-[360px] h-[360px] md:w-[520px] md:h-[520px] lg:h-full lg:max-h-[85vh] lg:w-auto lg:aspect-square opacity-90 lg:-mr-28" />
+          <CelestialOrb className="w-90 h-90 md:w-130 md:h-130 lg:h-full lg:max-h-[85vh] lg:w-auto lg:aspect-square opacity-90 lg:-mr-28" />
         </motion.div>
       </div>
 
