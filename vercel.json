@@ -1,7 +1,13 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".vercel/output",
+  "outputDirectory": "dist",
   "framework": "vite",
+  "installCommand": "npm install",
+  "functions": {
+    "src/server.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "env": {
     "RESEND_API_KEY": "@resend-api-key",
     "RESEND_FROM_EMAIL": "@resend-from-email",
