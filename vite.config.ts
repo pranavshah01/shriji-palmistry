@@ -6,17 +6,13 @@ import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [
-    tanstackStart(),
+    tanstackStart({
+      server: {
+        entry: "server",
+      },
+    }),
     react(),
     tailwindcss(),
     tsConfigPaths(),
   ],
-  build: {
-    rollupOptions: {
-      external: ["node:async_hooks"],
-    },
-  },
-  ssr: {
-    noExternal: ["@tanstack/start-storage-context"],
-  },
 });
