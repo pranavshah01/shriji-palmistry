@@ -1,6 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".output",
-  "framework": "nitro",
-  "installCommand": "npm install"
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "functions": {
+    "src/server.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
